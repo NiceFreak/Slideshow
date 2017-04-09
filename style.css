@@ -1,0 +1,73 @@
+.slideshow {
+    position: absolute;
+    width: 600px;
+    /* 水平居中 */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 图片默认属性 */
+.slide-image {
+    display: none;
+    box-shadow: inset 0px 0px 50px 0px #ABABAB, 5px 5px 25px 0px #242424;
+}
+/* 显示的图片 */
+.image-active {
+    display: inline-block;
+    width: 100%;
+}
+/* 按钮 */
+.slide-button {
+    font-family:"simsun";
+    font-size: 22px;
+    height: 50px;
+    width: 30px;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0.3;
+    color: white;
+    outline:none;
+    /*
+    按钮垂直居中
+    1. postion 设置为 absolute
+    2. top 设置为 50%, 也就是在父节点的一半
+    3. 把自身的位置往上移动 50%
+    */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* 鼠标移入渐变 */
+    transition: background 0.5s;
+}
+.slide-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0.8;
+}
+.slide-button-left {
+    left: 0;
+}
+.slide-button-right {
+    right: 0;
+}
+/* 小圆点背景 */
+.slide-indi-background {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 1px 8px;
+}
+.slide-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: red;
+    transition: background 0.5s;
+}
+/* 当前小圆点 */
+.indicator-white {
+    background: white;
+}
